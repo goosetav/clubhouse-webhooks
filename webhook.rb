@@ -49,6 +49,4 @@ client.org_repositories(github_org, :type => 'private').each do |repo|
     )
   end
 
-  exit(-1)
-
 end

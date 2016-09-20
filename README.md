@@ -1,23 +1,16 @@
-# jira-github-webhooks
+# clubhouse-webhooks
 
 script to automate setting up github webhooks
-
-## History
-
-When setting up Atlassian OnDemand's DVCS connector, it did not correctly create webhooks in Github to push back to Jira nor did it provide any error messages.
-
-As per https://confluence.atlassian.com/jirakb/slow-appearing-commits-from-bitbucket-or-github-in-jira-779160823.html you can manually add them.
-
-Rather than going through each repo and setting them up manually, this script automates the process.
 
 ## Usage/Installation
 
 ### pre-requisites
-  * Atlassian OnDemand username/password
-  * the DVCS connector configured and setup (if you see XML here, it is working: https://YOUR_SUBDOMAIN.atlassian.net/rest/bitbucket/1.0/repositories)
+
+  * a [clubhouse account](https://clubhouse.io) and your clubhouse webhook URL ("cog menu" > integrations > github)
   * A github token generated at https://github.com/settings/tokens
     * add these scopes: admin:repo_hook, repo
-  * a ruby environment
+  * the organization you want to wire up in clubhouse
+  * a ruby environment to run the script
 
 ### setup
 ```
