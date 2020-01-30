@@ -25,6 +25,7 @@ client = Octokit::Client.new(:access_token => github_token)
 
 client.org_repositories(github_org, :type => 'private').each do |repo|
 
+  next if repo.archived
   puts "adding webhooks to #{repo.name}..."
 
   repo_name = "#{github_org}/#{repo.name}"
